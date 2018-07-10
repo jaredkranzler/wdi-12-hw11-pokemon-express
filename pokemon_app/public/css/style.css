@@ -1,0 +1,21 @@
+  @import url('https://fonts.googleapis.com/css?family=Ceviche+One');
+   body {
+      color: blanchedalmond;
+      background-color: steelblue;
+      font-size: 400%;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      text-decoration: none;
+    }
+    h1 {
+      margin-bottom: -20px;
+      font-family: 'Ceviche One', cursive;
+    }
+    ul, a {
+      font-size: 100%;
+      list-style: none;
+      text-decoration: none;
+      margin-left: -25px;
+    }
+
