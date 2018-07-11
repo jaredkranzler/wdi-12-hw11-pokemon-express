@@ -1,19 +1,93 @@
-
+    @import url('https://fonts.googleapis.com/css?family=Shojumaru');
+   
     @import url('https://fonts.googleapis.com/css?family=Ceviche+One');
+   
+       @keyframes body {
+    from {background-color: rgb(186, 24, 13);}
+    to {background-color: rgb(98, 206, 35);}
+    from {color: rgb(98, 206, 35);}
+    to {color: rgb(186, 24, 13)}
+   } 
+   @keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+
+@-webkit-keyframes headShake {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  6.5% {
+    -webkit-transform: translateX(-6px) rotateY(-9deg);
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  18.5% {
+    -webkit-transform: translateX(5px) rotateY(7deg);
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  31.5% {
+    -webkit-transform: translateX(-3px) rotateY(-5deg);
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  43.5% {
+    -webkit-transform: translateX(2px) rotateY(3deg);
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  50% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
     body {
-      background: rgb(255, 169, 40);
+      background: rgb(186, 24, 13);
       color: blanchedalmond;
       font-size: 400%;
       display: flex;
       text-align: center;
       flex-direction: column;
       text-decoration: none;
+      animation-name: body;
+      animation-duration: 10s;
+      animation-delay: -2s;
     }
 
     h1 {
       font-family: 'Ceviche One', cursive;
       margin-top: 5px;
       margin-bottom: -20px;
+      text-shadow: 2px 2px 4px #000000;
     }
 
     h2 {
@@ -22,9 +96,29 @@
       text-decoration: none;
       margin-left: -25px;
       margin-top: 0px;
+      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+      animation-name: shake;
+      animation-duration: 2s;
+      animation-delay: 4s;
     }
+
+    h5 a {
+      font-size: 60%;
+      list-style: none;
+      text-decoration: ;
+      color: rgb(98, 206, 35);
+      margin-left: 0px;
+      margin-top: 50px;
+      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+      animation-name: body;
+      animation-duration: 10s;
+      animation-delay: -6s;
+    }
+
     img{
       height: 40%;
       width: 40%;
-      margin: 0 auto;å
+      margin: 0 auto;
+      animation-name: shake;
+      animation-duration: 2s;
     }

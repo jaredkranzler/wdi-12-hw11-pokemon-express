@@ -1,21 +1,183 @@
-  @import url('https://fonts.googleapis.com/css?family=Ceviche+One');
-   body {
+  @import url('https://fonts.googleapis.com/css?family=Shojumaru');
+
+    @import url('https://fonts.googleapis.com/css?family=Ceviche+One');
+
+    @keyframes body {
+      from {background-color: rgb(27, 197, 249);}
+      to {background-color: rgb(249, 238, 27);}
+      from {color: rgb(249, 238, 27);}
+      to {color: rgb(27, 197, 249)}
+    }
+
+@-webkit-keyframes bounce {
+  from,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes bounce {
+  from,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+    @keyframes h {
+      from {color: rgb(255, 219, 43);}
+      to {color: rgb(32, 179, 216);}
+    }
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+    body {
       color: blanchedalmond;
-      background-color: steelblue;
+      background-color: rgb(27, 197, 249);
       font-size: 400%;
       display: flex;
       text-align: center;
       flex-direction: column;
       text-decoration: none;
+      animation-name: body;
+      animation-duration: 2s;
     }
+
     h1 {
+      color: rgb(255, 219, 43);
+      margin-top: 0px;
       margin-bottom: -20px;
       font-family: 'Ceviche One', cursive;
+      text-shadow: 2px 2px 4px #000000;
+      animation-name: h;
+      animation-duration: 2s;
+      animation-name: bounce;
     }
+
     ul, a {
-      font-size: 100%;
+      color: rgb(249, 238, 27);
+      font-size: 70%;
       list-style: none;
       text-decoration: none;
       margin-left: -25px;
+      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+      animation-delay: 2.2s;
+      animation-name: flash;
+      animation-duration: 1s;
+    }
+
+    li {
+      margin-top: 20px; 
     }
 
