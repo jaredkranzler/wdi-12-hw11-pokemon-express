@@ -1,21 +1,20 @@
 const express = require('express');
 const app = express();
-const Pokemon = require('./models/pokemon')
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 var port = 3000;
 app.use(express.static('public'));
 
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
 
-app.get('/pokemon', (req, res) => {
-  res.render('index.ejs', {
-    pokemon: Pokemon
-  });
-});
 
-app.get('/pokemon/:index', (req, res) => {
-  res.render('show.ejs', {
-    pokemon: Pokemon[req.params.index]
-  });
-});
+const pokemonController = require('./controllers/pokemonController')
+
+//this means every route in the futuer starts
+// with /fruits
+app.use('/pokemons', pokemonController);
+
 
 
 app.listen(port, function(){

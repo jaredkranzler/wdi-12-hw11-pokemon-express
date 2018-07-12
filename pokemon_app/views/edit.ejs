@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="">
+  <style>
+    
+  </style>
+</head>
+<body>
+    <h1>Edit Pokemon</h1>
+
+  <form method="POST" action="/pokemons/<%=index%>?_method=PUT">
+    Name: <input type="text" name="name" value="<%= pokemon.name%>">
+    Img: <input type="url" name="img" value="<%=pokemon.img%>">
+    Happy?: <input type="checkbox" name="happy"
+
+    <% if(pokemon.happy === true) { %>
+      checked
+    <% } %>
+    >
+    <br/>
+    <input type="submit" name="submit changes"/>
+  </form>
+
+
+
+</body>
+</html>

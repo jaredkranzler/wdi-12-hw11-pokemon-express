@@ -29,15 +29,26 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-
+<!--   <audio controls autoplay src="https://www.myinstants.com/instant/pokemon/#.W0YX7g3l0IA.link"></audio> -->
  <h1>See All Pokemon!</h1>
-  <ul>
-    <% for(let i = 0; i < pokemon.length; i++) { %> 
-     <li>
-        <a href="http://localhost:3000/pokemon/<%= i %>"><%= pokemon[i].name %></a>
-      </li>
+
+    <ul>
+    <% for (let i = 0; i < pokemons.length; i++) { %>
+      <li>
+        <a href="http://localhost:3000/pokemons/<%= i %>"> <%= pokemons[i].name %></a>
+
+          <form action="/pokemons/<%=i%>?_method=DELETE" method="POST" >
+            <button type="submit">Put down pokemon</button>     
+
+          </form>
+
+
+          <a href="/pokemons/<%=i%>/edit">Edit</a>
+
+        </li>
     <%} %>
-  </ul>
+    </ul>
+
 
 </body>
 </html>
